@@ -8,7 +8,9 @@ def generateRandom():
     num1 = random.randint(1, 6)
     return num1
 
-while True:
+times = int(input("How many times do you want to roll the dice?"))
+
+while times > 0:
     ans = input("Roll the dice(y/n):").lower()
     if ans == "y":
         num1 = generateRandom()
@@ -18,4 +20,5 @@ while True:
     else:
         print("Thank you for playing.")
         break
+    times -= 1
 
