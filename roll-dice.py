@@ -17,8 +17,10 @@ while times > 0:
         num2 = generateRandom()
         num_tuple = (num1, num2)
         print(num_tuple)
-    else:
+    elif ans == "n":
         print("Thank you for playing.")
         break
+    else:
+        print("Invalid Choice")
     times -= 1
 
