@@ -9,7 +9,7 @@ def generateRandom():
     return num1
 
 while True:
-    ans = input("Roll the dice(y/n):")
+    ans = input("Roll the dice(y/n):").lower()
     if ans == "y":
         num1 = generateRandom()
         num2 = generateRandom()
