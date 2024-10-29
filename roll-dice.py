@@ -8,14 +8,19 @@ def generateRandom():
     num1 = random.randint(1, 6)
     return num1
 
-while True:
+times = int(input("How many times do you want to roll the dice?"))
+
+while times > 0:
     ans = input("Roll the dice(y/n):").lower()
     if ans == "y":
         num1 = generateRandom()
         num2 = generateRandom()
         num_tuple = (num1, num2)
         print(num_tuple)
-    else:
+    elif ans == "n":
         print("Thank you for playing.")
         break
+    else:
+        print("Invalid Choice")
+    times -= 1
 
