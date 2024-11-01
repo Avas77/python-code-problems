@@ -9,15 +9,26 @@ def generateRandom(min = 1, max = 100):
     return num1
 
 counter = 0
-min = int(input("What is minimum range?:"))
-max = int(input("What is maximum range?:"))
-guess = int(input("How many guesses do you want?"))
+while True:
+    try:
+        min = int(input("What is minimum range?:"))
+        max = int(input("What is maximum range?:"))
+        guess = int(input("How many guesses do you want?"))
+        break
+    except ValueError:
+        print("Invalid number")
+
 won = False
 randomNum = generateRandom(min, max)
 
 while guess > 0:
     counter += 1
-    num = int(input(f"Guess the number (between {min} and {max}):"))
+    while True:
+        try:
+            num = int(input(f"Guess the number (between {min} and {max}):"))
+            break
+        except:
+            print("Invalid number")
     if num < min or num > max:
         print("Number out of range")
     elif num == randomNum:
